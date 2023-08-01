@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let side1 = +prompt("Nhập cạnh thứ nhất:");
+        let side2 = +prompt("Nhập cạnh thứ hai:");
+        let side3 = +prompt("Nhập cạnh thứ ba:");
+
+        let isTriangle = side1 + side2 > side3 && side1 + side3 > side2 && side2 + side3 > side1;
+
+        if (isTriangle) {
+            if (side1 === side2 && side2 === side3) {
+                console.log("Tam giác đều");
+            } else if (side1 === side2 || side1 === side3 || side2 === side3) {
+                if (side1 * side1 + side2 * side2 === side3 * side3 || side1 * side1 + side3 * side3 === side2 * side2 || side2 * side2 + side3 * side3 === side1 * side1) {
+                    console.log("Tam giác vuông cân");
+                } else {
+                    console.log("Tam giác cân");
+                }
+            } else if (side1 * side1 + side2 * side2 === side3 * side3 || side1 * side1 + side3 * side3 === side2 * side2 || side2 * side2 + side3 * side3 === side1 * side1) {
+                console.log("Tam giác vuông");
+            } else {
+                console.log("Tam giác thường");
+            }
+        } else {
+            console.log("Ba cạnh không tạo thành tam giác.");
+        }
+
+    </script>
+</body>
+
+</html>

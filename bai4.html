@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let number1 = +prompt("Nhập số nguyên thứ nhất:");
+        let number2 = +prompt("Nhập số nguyên thứ hai:");
+        let operator = +prompt("Nhập phép toán (+, -, *, /):");
+
+        let result;
+        switch (operator) {
+            case '+':
+                result = number1 + number2;
+                break;
+            case '-':
+                result = number1 - number2;
+                break;
+            case '*':
+                result = number1 * number2;
+                break;
+            case '/':
+                if (number2 === 0) {
+                    console.log("Phép chia cho 0 không hợp lệ.");
+                    return;
+                }
+                result = number1 / number2;
+                break;
+        }
+        console.log("Kết quả của phép tính " + number1 + " " + operator + " " + number2 + " là: " + result);
+
+    </script>
+</body>
+
+</html>
